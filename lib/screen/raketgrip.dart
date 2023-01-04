@@ -14,41 +14,57 @@ class _RaketgripState extends State<Raketgrip> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xffECA869),
         title: Text("Cara pegang bet"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              height: 50,
-              width: 200,
-              child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Penhold()));
-                },
-                child: Text(
-                    "Penhold"
-                ),
-              ),
+      body: Stack(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Color(0xffF5F5DC),
             ),
-            SizedBox(height: 20,),
-            SizedBox(
-              height: 50,
-              width: 200,
-              child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Shakehand()));
-                },
-                child: Text(
-                    "Shakehand"
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xffECA869),
+                    ),
+                    onPressed: (){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Penhold()));
+                    },
+                    child: Text(
+                        "Penhold"
+                    ),
+                  ),
                 ),
-              ),
+                SizedBox(height: 20,),
+                SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xffECA869),
+                    ),
+                    onPressed: (){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Shakehand()));
+                    },
+                    child: Text(
+                        "Shakehand"
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

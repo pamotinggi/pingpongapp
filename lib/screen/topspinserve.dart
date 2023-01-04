@@ -23,21 +23,30 @@ class _TopspinserveState extends State<Topspinserve> {
         setState(() {});
       });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Top Spin Serve"
-        ),
+        backgroundColor: Color(0xffECA869),
+        title: Text("Top Spin Serve"),
       ),
-      body: Center(
-        child: _controller.value.isInitialized
-            ? AspectRatio(
-          aspectRatio: _controller.value.aspectRatio,
-          child: VideoPlayer(_controller),
-        )
-            : Container(),
+      body: Stack(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Color(0xffF5F5DC),
+            ),
+          ),
+          Center(
+            child: _controller.value.isInitialized
+                ? AspectRatio(
+                    aspectRatio: _controller.value.aspectRatio,
+                    child: VideoPlayer(_controller),
+                  )
+                : Container(),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

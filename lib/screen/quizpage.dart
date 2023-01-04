@@ -132,43 +132,56 @@ class _QuizpageState extends State<Quizpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xffECA869),
         title: Text(
           "Kuiz Ping Pong"
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Pilih jawapan yang betul",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                decoration: TextDecoration.underline,
-              ),
+      body: Stack(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Color(0xffF5F5DC),
             ),
-            SizedBox(height: 16),
-            Align(
-              alignment: Alignment.center,
-              child: (_indexQuestion <= 9 && _indexQuestion >= 0)
-                  ? Quiz(
-                  answerQuestion: _answerQuestion,
-                  indexQuestion: _indexQuestion,
-                  data: _data)
-                  : Result(_totalScore, _restart),
+          ),
+          SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Pilih jawapan yang betul",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                SizedBox(height: 16),
+                Align(
+                  alignment: Alignment.center,
+                  child: (_indexQuestion <= 9 && _indexQuestion >= 0)
+                      ? Quiz(
+                      answerQuestion: _answerQuestion,
+                      indexQuestion: _indexQuestion,
+                      data: _data)
+                      : Result(_totalScore, _restart),
+                ),
+                SizedBox(height: 16),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xffECA869),
+                  ),
+                  onPressed: () {
+                    _restart();
+                  },
+                  child: Text("Restart"),
+                ),
+              ],
             ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                _restart();
-              },
-              child: Text("Restart"),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

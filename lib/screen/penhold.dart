@@ -12,6 +12,7 @@ class _PenholdState extends State<Penhold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xffECA869),
         title: Text("Pegangan Penhold"),
       ),
       body: Center(

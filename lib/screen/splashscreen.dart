@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
       children: <Widget>[
         Expanded(
           child: Container(
-            color: Colors.greenAccent
+            color: Color(0xffF5F5DC),
           ),
         ),
         Container(
