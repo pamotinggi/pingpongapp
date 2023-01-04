@@ -28,12 +28,18 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/headerping.png"),
+                      fit: BoxFit.contain)),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
@@ -47,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
@@ -66,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
@@ -80,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
@@ -99,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -115,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -136,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -152,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(
                   height: 50,
-                  width: 100,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -170,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(
               height: 50,
-              width: 100,
+              width: 150,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,

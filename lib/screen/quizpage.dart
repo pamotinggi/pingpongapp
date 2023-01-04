@@ -21,7 +21,7 @@ class _QuizpageState extends State<Quizpage> {
     {
       'questionText': 'Ping pong dimainkan secara ',
       'answers': [
-        {'text': 'berseorangan dan beregu', 'score': 20.0},
+        {'text': 'berseorangan dan beregu', 'score': 10.0},
         {'text': 'berseorangan dan bertiga', 'score': 0.0},
         {'text': 'beregu dan bertiga', 'score': 0.0},
         {'text': 'berempat dan berlima', 'score': 0.00},
@@ -32,7 +32,7 @@ class _QuizpageState extends State<Quizpage> {
       'answers': [
         {'text': 'mata 21', 'score': 0.0},
         {'text': 'mata 15', 'score': 0.0},
-        {'text': 'mata 11', 'score': 20.0},
+        {'text': 'mata 11', 'score': 10.0},
         {'text': 'mata 9', 'score': 0.0},
       ]
     },
@@ -42,13 +42,13 @@ class _QuizpageState extends State<Quizpage> {
         {'text': 'seorang pemain telah memenangi perlawanan', 'score': 0.0},
         {'text': 'bola ping pong terkena jaring', 'score': 0.0},
         {'text': 'menentukan giliran pemain memulakan servis', 'score': 0.0},
-        {'text': 'kedua-dua pemain mendapat 10 mata', 'score': 20.0}
+        {'text': 'kedua-dua pemain mendapat 10 mata', 'score': 10.0}
       ]
     },
     {
       'questionText': 'Kemenangan perlawanan ditentukan dengan jumlah permainan berikut kecuali',
       'answers': [
-        {'text': '2', 'score': 20.0},
+        {'text': '2', 'score': 10.0},
         {'text': '3', 'score': 0.0},
         {'text': '5', 'score': 0.0},
         {'text': '7', 'score': 0.0}
@@ -58,7 +58,7 @@ class _QuizpageState extends State<Quizpage> {
       'questionText': 'Pemenang undian akan mendapat____pilihan sebelum memulakan permainan',
       'answers': [
         {'text': '2', 'score': 0.0},
-        {'text': '3', 'score': 20.0},
+        {'text': '3', 'score': 10.0},
         {'text': '4', 'score': 0.0},
         {'text': '5', 'score': 0.0}
       ]
@@ -69,7 +69,7 @@ class _QuizpageState extends State<Quizpage> {
         {'text': 'di belakangan badan pemain', 'score': 0.0},
         {'text': 'di bawah meja', 'score': 0.0},
         {'text': 'digenggam di atas permukaan meja', 'score': 0.0},
-        {'text': 'terbuka di atas permukaan meja', 'score': 20.0}
+        {'text': 'terbuka di atas permukaan meja', 'score': 10.0}
       ]
     },
     {
@@ -77,17 +77,17 @@ class _QuizpageState extends State<Quizpage> {
       'answers': [
         {'text': 'bola servis tidak terkenaa jaring', 'score': 0.0},
         {'text': 'diberi waktu rehat', 'score': 0.0},
-        {'text': 'bola servis terkena jaring', 'score': 20.0},
+        {'text': 'bola servis terkena jaring', 'score': 10.0},
         {'text': 'bola servis tidak memasuki kawasan pihak lawan', 'score': 0.0}
       ]
     },
     {
       'questionText': 'Ketinggian jaring dari permukaan meja adalah____',
       'answers': [
-        {'text': '15.25 cm', 'score': 20.0},
-        {'text': '14.55', 'score': 0.0},
-        {'text': '12.50', 'score': 0.0},
-        {'text': '10.50', 'score': 0.0}
+        {'text': '15.25 cm', 'score': 10.0},
+        {'text': '14.55 cm', 'score': 0.0},
+        {'text': '12.50 cm', 'score': 0.0},
+        {'text': '10.50 cm', 'score': 0.0}
       ]
     },
     {
@@ -95,7 +95,7 @@ class _QuizpageState extends State<Quizpage> {
       'answers': [
         {'text': 'bulatan', 'score': 0.0},
         {'text': 'segi empat sama', 'score': 0.0},
-        {'text': 'segi empat tepat', 'score': 20.0},
+        {'text': 'segi empat tepat', 'score': 10.0},
         {'text': 'segitiga', 'score': 0.0}
       ]
     },
@@ -103,7 +103,7 @@ class _QuizpageState extends State<Quizpage> {
       'questionText': 'Persukutan Tenis Meja Antarabangsa(ITTF) ditubuhkan pada tahun___',
       'answers': [
         {'text': '1932', 'score': 0.0},
-        {'text': '1926', 'score': 20.0},
+        {'text': '1926', 'score': 10.0},
         {'text': '1920', 'score': 0.0},
         {'text': '1924', 'score': 0.0}
       ]
@@ -153,7 +153,7 @@ class _QuizpageState extends State<Quizpage> {
             SizedBox(height: 16),
             Align(
               alignment: Alignment.center,
-              child: (_indexQuestion <= 4 && _indexQuestion >= 0)
+              child: (_indexQuestion <= 9 && _indexQuestion >= 0)
                   ? Quiz(
                   answerQuestion: _answerQuestion,
                   indexQuestion: _indexQuestion,
