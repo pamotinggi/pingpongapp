@@ -31,22 +31,13 @@ class _LongserveState extends State<Longserve> {
         backgroundColor: Color(0xffECA869),
         title: Text("Long Serve"),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
-            ),
-          ),
-          Center(
-            child: _controller.value.isInitialized
-                ? AspectRatio(
-                    aspectRatio: _controller.value.aspectRatio,
-                    child: VideoPlayer(_controller),
-                  )
-                : Container(),
-          ),
-        ],
+      body: Center(
+        child: _controller.value.isInitialized
+            ? AspectRatio(
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
+              )
+            : Container(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
