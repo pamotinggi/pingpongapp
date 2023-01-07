@@ -137,14 +137,7 @@ class _QuizpageState extends State<Quizpage> {
           "Kuiz Ping Pong"
         ),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
-            ),
-          ),
-          SingleChildScrollView(
+      body: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -181,8 +174,6 @@ class _QuizpageState extends State<Quizpage> {
               ],
             ),
           ),
-        ],
-      ),
     );
   }
 }

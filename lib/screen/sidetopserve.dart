@@ -32,14 +32,7 @@ class _SidetopserveState extends State<Sidetopserve> {
           "Side Top Serve"
         ),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
-            ),
-          ),
-          Center(
+      body: Center(
             child: _controller.value.isInitialized
                 ? AspectRatio(
               aspectRatio: _controller.value.aspectRatio,
@@ -47,8 +40,7 @@ class _SidetopserveState extends State<Sidetopserve> {
             )
                 : Container(),
           ),
-        ],
-      ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {

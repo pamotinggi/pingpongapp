@@ -15,14 +15,7 @@ class _ShakehandState extends State<Shakehand> {
         backgroundColor: Color(0xffECA869),
         title: Text("Pegangan Shakehand"),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
-            ),
-          ),
-          Center(
+      body: Center(
             child: Column(
               children: <Widget>[
                 Text("Berikut adalah cara pegangan shakehand :"),
@@ -37,8 +30,6 @@ class _ShakehandState extends State<Shakehand> {
               ],
             ),
           ),
-        ],
-      ),
     );
   }
 }

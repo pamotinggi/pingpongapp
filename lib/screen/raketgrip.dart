@@ -17,14 +17,7 @@ class _RaketgripState extends State<Raketgrip> {
         backgroundColor: Color(0xffECA869),
         title: Text("Cara pegang bet"),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
-            ),
-          ),
-          Center(
+      body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -64,8 +57,6 @@ class _RaketgripState extends State<Raketgrip> {
               ],
             ),
           ),
-        ],
-      ),
     );
   }
 }

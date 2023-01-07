@@ -23,20 +23,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Expanded(
-          child: Container(
-            color: Color(0xffF5F5DC),
-          ),
-        ),
-        Container(
+    return Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("assets/pingsplash.png"),
                   fit: BoxFit.contain)),
-        ),
-      ],
     );
   }
 }
