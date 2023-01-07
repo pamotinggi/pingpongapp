@@ -23,31 +23,21 @@ class _SidetopserveState extends State<Sidetopserve> {
         setState(() {});
       });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffECA869),
-        title: Text(
-          "Side Top Serve"
-        ),
+        title: Text("Side Top Serve"),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
-            ),
-          ),
-          Center(
-            child: _controller.value.isInitialized
-                ? AspectRatio(
-              aspectRatio: _controller.value.aspectRatio,
-              child: VideoPlayer(_controller),
-            )
-                : Container(),
-          ),
-        ],
+      body: Center(
+        child: _controller.value.isInitialized
+            ? AspectRatio(
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
+              )
+            : Container(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

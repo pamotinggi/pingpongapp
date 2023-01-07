@@ -46,7 +46,8 @@ class _QuizpageState extends State<Quizpage> {
       ]
     },
     {
-      'questionText': 'Kemenangan perlawanan ditentukan dengan jumlah permainan berikut kecuali',
+      'questionText':
+          'Kemenangan perlawanan ditentukan dengan jumlah permainan berikut kecuali',
       'answers': [
         {'text': '2', 'score': 10.0},
         {'text': '3', 'score': 0.0},
@@ -55,7 +56,8 @@ class _QuizpageState extends State<Quizpage> {
       ]
     },
     {
-      'questionText': 'Pemenang undian akan mendapat____pilihan sebelum memulakan permainan',
+      'questionText':
+          'Pemenang undian akan mendapat____pilihan sebelum memulakan permainan',
       'answers': [
         {'text': '2', 'score': 0.0},
         {'text': '3', 'score': 10.0},
@@ -100,7 +102,8 @@ class _QuizpageState extends State<Quizpage> {
       ]
     },
     {
-      'questionText': 'Persukutan Tenis Meja Antarabangsa(ITTF) ditubuhkan pada tahun___',
+      'questionText':
+          'Persukutan Tenis Meja Antarabangsa(ITTF) ditubuhkan pada tahun___',
       'answers': [
         {'text': '1932', 'score': 0.0},
         {'text': '1926', 'score': 10.0},
@@ -120,6 +123,7 @@ class _QuizpageState extends State<Quizpage> {
       _indexQuestion += 1;
     });
   }
+
 //untuk restart the whole quiz lepas habis jawab semua soalan
   void _restart() {
     setState(() {
@@ -133,55 +137,44 @@ class _QuizpageState extends State<Quizpage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffECA869),
-        title: Text(
-          "Kuiz Ping Pong"
-        ),
+        title: Text("Kuiz Ping Pong"),
       ),
-      body: Stack(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              color: Color(0xffF5F5DC),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "Pilih jawapan yang betul",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                decoration: TextDecoration.underline,
+              ),
             ),
-          ),
-          SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "Pilih jawapan yang betul",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    decoration: TextDecoration.underline,
-                  ),
-                ),
-                SizedBox(height: 16),
-                Align(
-                  alignment: Alignment.center,
-                  child: (_indexQuestion <= 9 && _indexQuestion >= 0)
-                      ? Quiz(
+            SizedBox(height: 16),
+            Align(
+              alignment: Alignment.center,
+              child: (_indexQuestion <= 9 && _indexQuestion >= 0)
+                  ? Quiz(
                       answerQuestion: _answerQuestion,
                       indexQuestion: _indexQuestion,
                       data: _data)
-                      : Result(_totalScore, _restart),
-                ),
-                SizedBox(height: 16),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xffECA869),
-                  ),
-                  onPressed: () {
-                    _restart();
-                  },
-                  child: Text("Restart"),
-                ),
-              ],
+                  : Result(_totalScore, _restart),
             ),
-          ),
-        ],
+            SizedBox(height: 16),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xffECA869),
+              ),
+              onPressed: () {
+                _restart();
+              },
+              child: Text("Restart"),
+            ),
+          ],
+        ),
       ),
     );
   }
