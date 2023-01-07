@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffECA869),
+        backgroundColor: const Color(0xffECA869),
         automaticallyImplyLeading: false,
         title: Text("Home Screen"),
       ),
@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -93,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -136,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -155,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -198,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffECA869),
+                          backgroundColor: Color(0xffECA869),
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -219,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 150,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffECA869),
+                      backgroundColor: Color(0xffECA869),
                     ),
                     onPressed: () {
                       Navigator.push(context,
