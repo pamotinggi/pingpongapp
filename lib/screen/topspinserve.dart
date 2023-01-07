@@ -16,8 +16,8 @@ class _TopspinserveState extends State<Topspinserve> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/video%2FTOP%20SPIN%20SERVE.mp4?alt=media&token=98182d1b-67ae-462a-ab48-54e06fc6abe5')
+    _controller = VideoPlayerController.asset(
+        'assets/topspinserve.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

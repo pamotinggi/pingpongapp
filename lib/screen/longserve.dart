@@ -16,8 +16,8 @@ class _LongserveState extends State<Longserve> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/video%2FLONG%20SERVE.mp4?alt=media&token=0f6fab84-2387-44ff-9361-4a8ddfb76e7e')
+    _controller = VideoPlayerController.asset(
+        'assets/longserve.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

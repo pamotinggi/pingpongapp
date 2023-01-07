@@ -16,8 +16,8 @@ class _SidetopserveState extends State<Sidetopserve> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/video%2FSIDE%20TOP%20SERVE.mp4?alt=media&token=934f1006-07d0-4fea-afe9-b9e18f702887')
+    _controller = VideoPlayerController.asset(
+        'assets/sidetopserve.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
