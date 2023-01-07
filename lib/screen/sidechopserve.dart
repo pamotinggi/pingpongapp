@@ -31,14 +31,21 @@ class _SidechopserveState extends State<Sidechopserve> {
         backgroundColor: Color(0xffECA869),
         title: Text("Side Chop Serve"),
       ),
-      body: Center(
+      body: Stack(
+        children: <Widget>[
+          Container(
+            color: Color(0xffF5F5DC),
+          ),
+          Center(
             child: _controller.value.isInitialized
                 ? AspectRatio(
                     aspectRatio: _controller.value.aspectRatio,
                     child: VideoPlayer(_controller),
                   )
-                : Container(),
+                : Container(child: CircularProgressIndicator(),),
           ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
