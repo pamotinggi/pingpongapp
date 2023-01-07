@@ -37,7 +37,7 @@ class _LongserveState extends State<Longserve> {
                 aspectRatio: _controller.value.aspectRatio,
                 child: VideoPlayer(_controller),
               )
-            : Container(),
+            : Container(child: CircularProgressIndicator(),),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
