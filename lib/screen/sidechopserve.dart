@@ -37,7 +37,7 @@ class _SidechopserveState extends State<Sidechopserve> {
                 aspectRatio: _controller.value.aspectRatio,
                 child: VideoPlayer(_controller),
               )
-            : Container(child: CircularProgressIndicator(),),
+            : Container(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
