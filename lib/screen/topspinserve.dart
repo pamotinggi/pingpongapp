@@ -11,7 +11,7 @@ class Topspinserve extends StatefulWidget {
 
 class _TopspinserveState extends State<Topspinserve> {
   late VideoPlayerController _controller;
-
+  String link = 'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/video%2FTOP%20SPIN%20SERVE.mp4?alt=media&token=98182d1b-67ae-462a-ab48-54e06fc6abe5';
   //untuk retrieve video
   @override
   void initState() {
@@ -42,7 +42,10 @@ class _TopspinserveState extends State<Topspinserve> {
                       aspectRatio: _controller.value.aspectRatio,
                       child: VideoPlayer(_controller),
                     )
-                  : Container(child: CircularProgressIndicator(),),
+                  : link != null? AspectRatio(
+                aspectRatio: VideoPlayerController.network(link).value.aspectRatio,
+                child: VideoPlayer(VideoPlayerController.network(link)),
+              ) : Container(child: CircularProgressIndicator(),),
             ),
           ],
         ),
