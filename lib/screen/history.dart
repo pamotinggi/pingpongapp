@@ -16,7 +16,7 @@ class _HistoryState extends State<History> {
         backgroundColor: Color(0xffECA869),
         title: Text("Sejarah Ping Pong"),
       ),
-      body: Container(
+      body:  Container(
         child: SfPdfViewer.asset(
           'assets/pingpong.pdf',
         ),

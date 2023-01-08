@@ -31,13 +31,20 @@ class _ShortserveState extends State<Shortserve> {
         backgroundColor: Color(0xffECA869),
         title: Text("Short Serve"),
       ),
-      body: Center(
-        child: _controller.value.isInitialized
-            ? AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: VideoPlayer(_controller),
-              )
-            : Container(),
+      body: Stack(
+        children:[
+          Container(
+            color: Color(0xffF5F5DC),
+          ),
+          Center(
+            child: _controller.value.isInitialized
+                ? AspectRatio(
+              aspectRatio: _controller.value.aspectRatio,
+              child: VideoPlayer(_controller),
+            )
+                : Container(child: CircularProgressIndicator(),),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
