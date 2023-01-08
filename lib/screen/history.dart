@@ -9,7 +9,6 @@ class History extends StatefulWidget {
 }
 
 class _HistoryState extends State<History> {
-  String link = 'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/storybook%2Fpingpong.pdf?alt=media&token=2f66c8f7-2f90-4354-a517-38979b90c688';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,9 +17,10 @@ class _HistoryState extends State<History> {
         title: Text("Sejarah Ping Pong"),
       ),
       body:  Container(
-            child: link != null ? SfPdfViewer.network(link,
-                pageLayoutMode: PdfPageLayoutMode.single) : CircularProgressIndicator(),
-          ),
+        child: SfPdfViewer.asset(
+          'assets/pingpong.pdf',
+        ),
+      ),
     );
   }
 }

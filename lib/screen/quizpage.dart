@@ -169,7 +169,7 @@ class _QuizpageState extends State<Quizpage> {
                 SizedBox(height: 16),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xffECA869),
+                    backgroundColor: Color(0xffECA869),
                   ),
                   onPressed: () {
                     _restart();

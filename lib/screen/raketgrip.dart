@@ -31,7 +31,7 @@ class _RaketgripState extends State<Raketgrip> {
                   width: 200,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffECA869),
+                      backgroundColor: Color(0xffECA869),
                     ),
                     onPressed: (){
                       Navigator.push(
@@ -48,7 +48,7 @@ class _RaketgripState extends State<Raketgrip> {
                   width: 200,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffECA869),
+                      backgroundColor: Color(0xffECA869),
                     ),
                     onPressed: (){
                       Navigator.push(

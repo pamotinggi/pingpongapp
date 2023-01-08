@@ -16,8 +16,8 @@ class _WarmupState extends State<Warmup> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/video%2FWARM%20UP.mp4?alt=media&token=95021962-c946-49b6-8070-8609a47dfaa3')
+    _controller = VideoPlayerController.asset(
+        'assets/warmup.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

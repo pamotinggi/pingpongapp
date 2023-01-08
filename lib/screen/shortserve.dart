@@ -16,8 +16,8 @@ class _ShortserveState extends State<Shortserve> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://firebasestorage.googleapis.com/v0/b/children-data.appspot.com/o/video%2FSHORT%20SERVE.mp4?alt=media&token=aa04fd0d-d607-44f7-9242-ed691494552d')
+    _controller = VideoPlayerController.asset(
+        'assets/shortserve.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
